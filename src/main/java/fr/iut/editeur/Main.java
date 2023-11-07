@@ -18,12 +18,10 @@ public class Main {
             String[] parameters = input.split(";");
             String nomCommande = parameters[0];
             Commande commande = factory.createCommand(nomCommande, document, parameters);
-            if(commande != null) {
+            if(commande != null)
                 invoker.executer(commande);
-            }
-            else {
-                System.err.println("Cette commande n'existe pas!");
-            }
+            else System.err.println("Cette commande n'existe pas!");
         }
+        //
     }
 }
